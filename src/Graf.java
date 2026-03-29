@@ -35,8 +35,8 @@ public class Graf {
 
     public boolean cesta(String text){
         String[] split = text.trim().split("-");
-        for (int i = 0; i < split.length-2; i++){
-            for (int j = i; j < split.length-1; j++){
+        for (int i = 0; i < split.length; i++){
+            for (int j = i + 1; j < split.length; j++){
                 if (split[i].equals(split[j])){
                     return false;
                 }
@@ -53,8 +53,8 @@ public class Graf {
         if (!split[0].equals(split[split.length-1])){
             return false;
         }else{
-            for (int i = 0; i < split.length-3; i++){
-                for (int j = i; j < split.length-1; j++){
+            for (int i = 0; i < split.length-1; i++){
+                for (int j = i + 1; j < split.length-1; j++){
                     if (split[i].equals(split[j])){
                         return false;
                     }
